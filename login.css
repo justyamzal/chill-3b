@@ -1,0 +1,300 @@
+/* Import Fonts Google - Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('fonts.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background-image: url('assets/bg-images/bg-login.png');
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: rgba(24, 26, 28, 0.84);
+  width: 100%;
+  max-width: 529px;
+  /* min-height: auto; */
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  color: white;
+
+}
+
+/*--- Login Card Header ---*/
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+  text-align: center;
+}
+
+
+.login-header .caption {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.login-header h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.login-header p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+
+/*--- Login Form ---*/
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.login-form .input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-group label {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 20px;
+
+  background-color: transparent;
+  border-radius: 24px;
+  border: 1px solid rgba(231, 227, 252, 0.23);
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  color: rgba(193, 194, 196, 1);
+}
+
+.input-group .password-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+#toggle-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #a0a0a0;
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(193, 194, 196, 1);
+
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+.form-links a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+/*--- Button Action Group ---*/
+.btn-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-group .btn {
+  border-radius: 24px;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+
+}
+
+.btn-login {
+  gap: 10px;
+  background-color: rgba(61, 65, 66, 1);
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(231, 227, 252, 0.23);
+
+}
+
+
+.btn-group .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(157, 158, 161, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(231, 227, 252, 0.23);
+}
+
+/*--- Media Queries ---*/
+
+/* For Mobile / Smartphone */
+
+/* @media (max-width: 360px), (max-width: 480px)  */
+@media screen and (max-width: 600px) {
+  .login-container {
+    width: 100%;
+    max-width: 306px;
+    min-width: 0;
+    /* min-height: 384px; */
+    border-radius: 8px;
+    padding: 24px;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .login-header .logo {
+    width: 94px;
+    min-height: 24px;
+    object-fit: contain;
+    gap: 2.31px;
+  }
+
+  .login-header .caption {
+    gap: 4.62px;
+  }
+
+  .login-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .login-header p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .input-group .username-field,
+  .input-group .password-field {
+    gap: 4px;
+  }
+
+  .input-group label {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .input-group input {
+    width: 260px;
+    max-width: 100%;
+    border-radius: 12px;
+    border: 0.58px solid rgba(231, 227, 252, 0.23);
+    padding: 8.09px 11.55px;
+    gap: 5.78px;
+    font-size: 9.24px;
+    line-height: 1.4;
+    letter-spacing: 0.12px;
+  }
+
+  .input-group .password-wrapper .toggle-password {
+    width: 12px;
+    height: 12px;
+  }
+
+  .form-links {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+    gap: 4px;
+  }
+
+  .btn-group .btn-login,
+  .btn-group .btn-google {
+    width: 258px;
+    max-width: 100%;
+    border-radius: 13.86px;
+    border: 0.58px solid rgba(231, 227, 252, 0.23);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 8px 11.55px;
+    gap: 5.78px;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .btn-google img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .btn-group .divider {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login page for CHILL, a platform for stream movie and tv show.">
+    <meta name="keywords" content="CHILL, login, streaming, movies, tv shows">
+    <meta name="author" content="Yadri">
+    <title>Login - CHILL</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icon/chill-icon.svg" type="image/x-icon">
+
+</head>
+<body>
+    <div class="login-container">
+        <!-- header form -->
+        <div class="login-header">
+            <img src="assets/icon/Logo.png" class="logo" alt="">
+            <div class="caption">
+                <h3>Masuk</h3>
+                <p>Selamat datang kembali</p>
+            </div>
+        </div>
+        <!-- form -->
+        <form action="" class="login-form">
+            <div class="input-group username-field">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Masukkan username" required>
+            </div>
+            <div class="input-group password-field">
+                    <label for="password">Kata Sandi</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="password" id="password" placeholder="Masukkan kata sandi" required>
+                        <img src="assets/icon/eye-off.svg" id="toggle-password" alt="">
+                    </div>
+            <!-- registration and forgot link-->
+            <div class="form-links">
+                <span id="">Belum punya akun? <a href="register.html" id="link-to-reg">Daftar</a></span>             
+                <a href="" id="forgot-password">Lupa kata sandi?</a>
+                
+            </div>
+            </div>
+
+            <!-- button group -->
+             <div class="btn-group">
+                <button type="submit" class="btn btn-login">Masuk</button>
+                <div class="divider">Atau</div>
+                <button type="button" class="btn btn-google">
+                    <img src="/assets/icon/google-icon.svg" alt="Google icon" />
+                    Masuk dengan Google
+                </button>
+             </div>
+        </form>
+    </div>
+</body>
+</html>
+
