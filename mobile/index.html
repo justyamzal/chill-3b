@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icon/chill-icon.svg" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div class="home-container">
+        <!-- Header  -->
+        <Header class="header">
+            <nav class="nav">
+                <div class="nav-left">
+                    <img src="../assets/icon/chill-icon.svg" class="nav-logo" alt="nav logo">
+                </div>
+                <div class="main-nav">
+                    <ul>
+                        <li><a href="#">Series</a></li>
+                        <li><a href="#">Film</a></li>
+                        <li><a href="#">Daftar Saya</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="user-profile avatar-dropdown">
+                        <img src="../assets/icon/avatar_profile.png" class="avatar_profile" alt="avatar picture">
+                        <span><img src="../assets/icon/vector_arrow.svg" class="dropdown_arrow"
+                                alt="dropdown arrow"></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><i class="fa-solid fa-user"></i> Profil Saya</li>
+                    <li><i class="fa-solid fa-star"></i> Ubah Premium</li>
+                    <li><i class="fa-solid fa-right-from-bracket"></i> Keluar</li>
+                </ul>
+            </div>
+        </Header>
+
+        <!-- Mobile Header  -->
+        <!-- HEADER MOBILE VERSION -->
+        <header class="mobile-header">
+            <div class="mobile-nav">
+                <nav class="nav-links">
+                    <div class="logo">
+                        <img src="../assets/icon/chill-icon.svg" alt="">
+                    </div>
+                    <div>
+                        <a href="#">Series</a>
+                        <a href="#">Film</a>
+                        <a href="#">Daftar Saya</a>
+                    </div>
+                </nav>
+                <div class="profile">
+                    <img src="../assets/icon/avatar_profile.png" alt="avatar">
+                </div>
+            </div>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Duty After School</h1>
+                    <p>Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai
+                        merekrut...</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Mulai</button>
+                        <button class="btn-secondary">ℹ️ Selengkapnya</button>
+                        <span class="label-age">18+</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <h2 class="section-title">Lanjut Tonton</h2>
+            <div class="carousel-wrapper">
+                <div class="arrow-btn arrow-left">
+                    <img src="assets/icon/arrow-left.svg" alt="Left Arrow">
+                </div>
+
+                <div class="card-container">
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/309/151?random=1" alt="Film 1">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/309/151?random=2" alt="Film 2">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/309/151?random=3" alt="Film 3">
+                    </div>
+                </div>
+
+                <div class="arrow-btn arrow-right">
+                    <img src="assets/icon/arrow-right.svg" alt="Right Arrow">
+                </div>
+            </div>
+        </section>
+
+        <!-- main -->
+        <main>
+            <section></section>
+        </main>
+        <!-- footer -->
+        <footer></footer>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const slider = document.querySelector('.card-container');
+        let scrollX = 0;
+
+        function autoScroll() {
+            scrollX += 1;
+            if (scrollX >= slider.scrollWidth - slider.clientWidth) {
+                scrollX = 0;
+            }
+            slider.scrollTo({
+                left: scrollX,
+                behavior: 'smooth'
+            });
+        }
+
+        setInterval(autoScroll, 30);
+    </script>
+</body>
+
+</html>

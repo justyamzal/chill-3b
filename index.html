@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,11 @@
     <title> BERANDA - CHILL</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
@@ -21,28 +26,35 @@
 </head>
 
 <body>
+    <!-- container -->
     <div class="home-container">
-        <header class="main-header">
-            <div class="header-left">
-                <div class="logo">
-                    <img src="assets/icon/Logo.svg" alt="CHILL Logo">
+        <!-- header -->
+        <header class="header">
+            <!-- navbar -->
+            <nav class="nav">
+                <div class="nav-left">
+
+                    <!-- <img src="assets/icon/logo.svg" class="nav-logo" alt=""> -->
+                    <img src="assets/icon/logo.svg" class="nav-logo" alt="">
+                    <img src="assets/icon/chill-icon.svg" class="mobile-logo" alt="">
+
+                    <div class="main-nav">
+                        <ul>
+                            <li><a href="#">Series</a></li>
+                            <li><a href="#">Film</a></li>
+                            <li><a href="#">Daftar Saya</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="main-nav">
-                    <ul>
-                        <li><a href="">Series</a></li>
-                        <li><a href="">Film</a></li>
-                        <li><a href="">Daftar Saya</a></li>
-                    </ul>
+
+                <div class="nav-right">
+                    <div class="user-profile avatar-dropdown">
+                        <img src="assets/icon/avatar_profile.png" class="avatar_profile" alt="avatar">
+                        <img src="assets/icon/vector_arrow.svg" class="dropdown-arrow" alt="dropdown">
+                    </div>
                 </div>
-            </div>
-            <div class="right-left">
-                <!-- Avatar Profile -->
-                <div class="user-profile avatar-dropdown">
-                    <img src="assets/icon/avatar_profile.png" class="avatar-profile alt="Avatar Profile">
-                    <span class="arrow-down avatar-profile"><img src="assets/icon/vector_arrow.svg" alt=""></span>
-                </div>
-            </div>
-            <!-- menu dropdown  -->
+            </nav>
+
             <div class="dropdown-profile" id="dropdownProfile">
                 <ul>
                     <li><i class="fa-solid fa-user"></i> Profil Saya</li>
@@ -50,28 +62,31 @@
                     <li><i class="fa-solid fa-right-from-bracket"></i> Keluar</li>
                 </ul>
             </div>
-
-
         </header>
-        <main>
-            <section id="hero">
-                <!-- Content -->
-                <div class="hero-content">
-                    <!-- about movie -->
-                    <h1 class="hero-title">Duty After School</h1>
-                    <div class="hero-description">
-                        Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan,
 
+        <!-- Mobile Header -->
+
+
+        <!-- Main  -->
+        <main>
+            <!-- Hero -->
+            <section id="hero">
+                <div class="hero-container">
+                    <h1 class="hero-title">Duty After School</h1>
+                    <p class="hero-description">Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan,
                         Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah.
                         Mereka pun segera menjadi pejuang garis depan dalam perang.
-                    </div>
+                    </p>
                     <div class="hero-actions">
                         <div class="hero-actions-left">
                             <button class="btn btn-start">Mulai</button>
-                            <button class="btn btn-more">Selengkapnya</button>
+                            <button class="btn btn-more">
+                                <img src="assets/icon/info.svg" class="information-outline" alt="">
+                                <span>Selengkapnya</span>
+                            </button>
                             <span class="age-rating">18+</span>
                         </div>
-                        <div class="volume hero-actions-right">
+                        <div class="hero-actions-right">
                             <img src="assets/icon/volume-off.svg" alt="">
                         </div>
                     </div>
@@ -79,206 +94,248 @@
             </section>
 
             <!-- History -->
-            <section class="content-section history">
-                <h2>Melanjutkan Tontonan Film</h2>
-                <div class="card-container">
-                    <div class="arrow-left arrow-btn">
-                        <img src="assets/icon/arrow-left.svg" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/history_1.png" alt="">
-                        <div class="movie-info">
-                            <div class="title-movie dont-look-up">Dont Look Up</div>
-                            <div class="rating-movie">
-                                <img src="assets/icon/star.svg" class="rating-stars" alt="">
-                                <span>4.5/5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/history_2.png" alt="">
-                        <div class="movie-info">
-                            <div class="title-movie all-of-us-are-dead">All Of Us Are Dead</div>
-                            <div class="rating-movie">
-                                <img src="assets/icon/star.svg" class="rating-stars" alt="">
-                                <span>4.2/5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/history_3.png" alt="">
-                        <div class="movie-info">
-                            <div class="badge-new-eps">
-                                <p>Episode Baru</p>
-                            </div>
-                            <div class="title-movie blue-lock">Blue Lock</div>
-                            <div class="rating-movie">
-                                <img src="assets/icon/star.svg" class="rating-stars" alt="">
-                                <span>4.6/5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/history_4.png" alt="">
-                        <div class="movie-info">
-                            <div class="title-movie a-man-called-otto">A Man Called Otto</div>
-                            <div class="rating-movie">
-                                <img src="assets/icon/star.svg" class="rating-stars" alt="">
-                                <span>4.4/5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arrow-right arrow-btn">
-                        <img src="assets/icon/arrow-right.svg" alt="">
-                    </div>
-                </div>
-            </section>
-            <!-- Top Rating Film dan Series Hari ini -->
-            <section class="content-section top-rating">
-                <h2>Top Rating Film dan Series Hari ini</h2>
-                <div class="card-container">
-                    <div class="arrow-left arrow-btn">
-                        <img src="assets/icon/arrow-left.svg" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/top_1.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/top_2.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/top_3.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/top_4.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/top_5.png" alt="">
-                    </div>
-                    <div class="arrow-right arrow-btn">
-                        <img src="assets/icon/arrow-right.svg" alt="">
+            <section class="history-container content-section">
+                <h3>Melanjutkan Tontonan Film</h3>
+                <div class="splide splide-history" role="group" aria-label="Melanjutkan Tontonan Film">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="movie-card">
+                                    <img src="assets/beranda/history_1.webp" alt="">
+                                    <div class="movie-info">
+                                        <div class="title-movie dont-look-up">Dont Look Up</div>
+                                        <div class="rating-movie">
+                                            <img src="assets/icon/star.svg" class="rating-stars" alt="">
+                                            <span>4.5/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="movie-card">
+                                    <img src="assets/beranda/history_2.webp" alt="">
+                                    <div class="movie-info">
+                                        <div class="title-movie dont-look-up">All of Us Are Dead</div>
+                                        <div class="rating-movie">
+                                            <img src="assets/icon/star.svg" class="rating-stars" alt="">
+                                            <span>4.2/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="movie-card">
+                                    <img src="assets/beranda/history_3.webp" alt="">
+                                    <div class="movie-info">
+                                        <div class="title-movie dont-look-up">Blue Lock</div>
+                                        <div class="rating-movie">
+                                            <img src="assets/icon/star.svg" class="rating-stars" alt="">
+                                            <span>4.6/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="movie-card">
+                                    <img src="assets/beranda/history_4.webp" alt="">
+                                    <div class="movie-info">
+                                        <div class="title-movie dont-look-up">A Man Called Otto</div>
+                                        <div class="rating-movie">
+                                            <img src="assets/icon/star.svg" class="rating-stars" alt="">
+                                            <span>4.9/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="movie-card">
+                                    <img src="assets/beranda/history_1.webp" alt="">
+                                    <div class="movie-info">
+                                        <div class="title-movie dont-look-up">Dont Look Up</div>
+                                        <div class="rating-movie">
+                                            <img src="assets/icon/star.svg" class="rating-stars" alt="">
+                                            <span>4.5/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
-            <!-- Film Trending -->
-            <section class="content-section trending">
-                <h2>Top Rating Film dan Series Hari ini</h2>
-                <div class="card-container">
-                    <div class="arrow-left arrow-btn">
-                        <img src="assets/icon/arrow-left.svg" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/trend_1.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/trend_2.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/trend_3.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/trend_4.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/trend_5.png" alt="">
-                    </div>
-                    <div class="arrow-right arrow-btn">
-                        <img src="assets/icon/arrow-right.svg" alt="">
+
+
+
+            <!-- Top rating -->
+            <section id="top-rating" class="top-rating-container content-section recommendation">
+                <h3>Top Rating Film dan Series Hari ini</h3>
+                <div class="splide splide-top-rating" aria-label="Top Rating Carousel">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide top-card">
+                                <img src="assets/beranda/top_1.webp" alt="Film 1">
+                            </li>
+                            <li class="splide__slide top-card">
+                                <img src="assets/beranda/top_2.webp" alt="Film 2">
+                            </li>
+                            <li class="splide__slide top-card">
+                                <img src="assets/beranda/top_3.webp" alt="Film 3">
+                            </li>
+                            <li class="splide__slide top-card">
+                                <img src="assets/beranda/top_4.webp" alt="Film 4">
+                            </li>
+                            <li class="splide__slide top-card">
+                                <img src="assets/beranda/top_5.webp" alt="Film 5">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
-            <!-- Rilis Terbaru -->
-            <section class="content-section new-release">
-                <h2>Rilis Baru</h2>
-                <div class="card-container">
-                    <div class="arrow-left arrow-btn">
-                        <img src="assets/icon/arrow-left.svg" alt="">
+
+            <!-- Trending -->
+            <section id="trending" class="trending-container content-section recommendation">
+                <h3>Film Trending</h3>
+                <div class="splide splide-trending" aria-label="Trending Carousel">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide trend-card">
+                                <img src="assets/beranda/trend_1.webp" alt="Film 1">
+                            </li>
+                            <li class="splide__slide trend-card">
+                                <img src="assets/beranda/trend_2.webp" alt="Film 2">
+                            </li>
+                            <li class="splide__slide trend-card">
+                                <img src="assets/beranda/trend_3.webp" alt="Film 3">
+                            </li>
+                            <li class="splide__slide trend-card">
+                                <img src="assets/beranda/trend_4.webp" alt="Film 4">
+                            </li>
+                            <li class="splide__slide trend-card">
+                                <img src="assets/beranda/trend_5.webp" alt="Film 5">
+                            </li>
+                        </ul>
                     </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/new_1.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/new_2.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/new_3.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/new_4.png" alt="">
-                    </div>
-                    <div class="movie-card">
-                        <img src="assets/beranda/new_5.png  " alt="">
-                    </div>
-                    <div class="arrow-right arrow-btn">
-                        <img src="assets/icon/arrow-right.svg" alt="">
+                </div>
+
+            </section>
+
+            <!-- New release -->
+            <section id="new-release" class="new-release-container content-section recommendation">
+                <h3>Rilis Baru</h3>
+                <div class="splide splide-new-release" aria-label="New Release Carousel">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide new-card">
+                                <img src="assets/beranda/new_1.webp" alt="Film 1">
+                            </li>
+                            <li class="splide__slide new-card">
+                                <img src="assets/beranda/new_2.webp" alt="Film 2">
+                            </li>
+                            <li class="splide__slide new-card">
+                                <img src="assets/beranda/new_3.webp" alt="Film 3">
+                            </li>
+                            <li class="splide__slide new-card">
+                                <img src="assets/beranda/new_4.webp" alt="Film 4">
+                            </li>
+                            <li class="splide__slide new-card">
+                                <img src="assets/beranda/new_5.webp" alt="Film 5">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
         </main>
 
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-container">
-                <!-- Logo -->
+                <!-- Footer Logo -->
                 <div class="footer-logo">
-                    <img src="assets/icon/Logo.svg" alt="chill logo">
+                    <img src="assets/icon/logo.svg" alt="chill logo">
                     <p>@2023 Chill All Rights Reserved</p>
                 </div>
                 <!-- Genre -->
                 <div class="footer-genre">
-                    <p class="title">Genre</p>
+                    <div class="title">Genre</div>
                     <div class="genre-list">
                         <ul>
-                            <li><a href="">Aksi</a></li>
-                            <li><a href="">Anak-anak</a></li>
-                            <li><a href="">Anime</a></li>
-                            <li><a href="">Britania</a></li>
+                            <li><a href="#">Aksi</a></li>
+                            <li><a href="#">Anak-anak</a></li>
+                            <li><a href="#">Anime</a></li>
+                            <li><a href="#">Britania</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Drama</a></li>
-                            <li><a href="">Fantasi Ilmiah & Fantasi</a></li>
-                            <li><a href="">Kejahatan</a></li>
-                            <li><a href="">KDrama</a></li>
+                            <li><a href="#">Drama</a></li>
+                            <li><a href="#">Fantasi Ilmiah & Fantasi</a></li>
+                            <li><a href="#">Kejahatan</a></li>
+                            <li><a href="#">KDrama</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Komedi</a></li>
-                            <li><a href="">Petualangan</a></li>
-                            <li><a href="">Perang</a></li>
-                            <li><a href="">Romantis</a></li>
+                            <li><a href="#">Komedi</a></li>
+                            <li><a href="#">Petualangan</a></li>
+                            <li><a href="#">Perang</a></li>
+                            <li><a href="#">Romantis</a></li>
                         </ul>
                         <ul>
-                            <li><a href="">Sains & Alam</a></li>
-                            <li><a href="">Thriller</a></li>
+                            <li><a href="#">Sains & Alam</a></li>
+                            <li><a href="#">Thriller</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-help">
                     <p class="title">Bantuan</p>
                     <ul class="help-list">
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Kontak Kami</a></li>
-                        <li><a href="">Privasi</a></li>
-                        <li><a href="">Syarat & Ketentuan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Kontak Kami</a></li>
+                        <li><a href="#">Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
                     </ul>
+                </div>
+            </div>
+        </footer>
+        <footer class="footer-mobile">
+            <div class="mob-container">
+                <div class="mob-logo">
+                    <img src="assets/icon/logo.svg" alt="">
+                    <p>@2023 Chill All Rights Reserved</p>
+                </div>
+                <div class="link-accordion">
+                    <div class="mob-genre accordion-item">
+                        <button class="accordion-header">Genre<span><img src="assets/icon/option-right.svg" alt=""></span></button>
+                        <div class="accordion-content">
+                            <a href="#">Aksi</a>
+                            <a href="#">Anak-anak</a>
+                            <a href="#">Anime</a>
+                            <a href="#">Britania</a>
+                            <a href="#">Drama</a>
+                            <a href="#">Fantasi Ilmiah & Fantasi</a>
+                            <a href="#">Kejahatan</a>
+                            <a href="#">KDrama</a>
+                            <a href="#">Komedi</a>
+                            <a href="#">Petualangan</a>
+                            <a href="#">Romantis</a>
+                            <a href="#">Sains & Alam</a>
+                            <a href="#">Thriller</a>
+                        </div>
+                    </div>
+                    <div class="mob-help-list accordion-item">
+                        <button class="accordion-header">Bantuan<span><img src="assets/icon/option-right.svg" alt=""></span></button>
+                       <div class="accordion-content">
+                        <a href="#">FAQ</a>
+                        <a href="#">Kontak Kami</a>
+                        <a href="#">Privasi</a>
+                        <a href="#">Syarat & Ketentuan</a>
+                       </div>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
 
-<script>
-    const avatar = document.querySelector('.avatar-dropdown');
-    const dropdown = document.getElementById('dropdownProfile');
+    <!-- JS -->
 
-    avatar.addEventListener('click', () => {
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
-
-    // klik di luar dropdown untuk menutup
-    window.addEventListener('click', (e) => {
-        if (!avatar.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
